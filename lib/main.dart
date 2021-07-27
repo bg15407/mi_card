@@ -13,42 +13,73 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                width: 100.0,
-                height: 100.0,
-                color: Colors.pinkAccent,
-                child: Text("Container 03"),
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 50.0,
+              backgroundColor: Colors.transparent,
+              backgroundImage: AssetImage('images/GK2.png'),
+            ),
+            Text(
+              'Gayan Kalinga',
+              style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  color: Colors.white,
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Mobile App Developer',
+              style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  color: Colors.teal.shade100,
+                  fontSize: 20.0,
+                  letterSpacing: 2.5),
+            ),
+            SizedBox(
+              height: 20.0,
+              width: 150.0,
+              child: Divider(color: Colors.teal.shade100),
+            ),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  size: 20,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  '0772683614',
+                  style: TextStyle(
+                      color: Colors.teal,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20),
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.yellowAccent,
-                    child: Text("Container 03"),
-                  ),
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.greenAccent,
-                    child: Text("Container 03"),
-                  ),
-                ],
+            ),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  size: 20,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  'bg15407@gmail.com',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: 'SourceSansPro',
+                      color: Colors.teal),
+                ),
               ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                color: Colors.blueAccent,
-                child: Text("Container 03"),
-              ),
-            ],
-          ),
-        ),
+            )
+          ],
+        )),
       ),
     );
   }
